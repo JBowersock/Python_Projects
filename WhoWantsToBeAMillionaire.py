@@ -1,5 +1,3 @@
-#Encountering one issue. Where when user loses, and are asked to replay. If they select yes, the game crashes.
-
 def start(prize=0,name=""):
     name = describe_game(name)
     prize = q1(prize,name),q2(prize,name),q3(prize,name),q4(prize,name),q5(prize,name),q6(prize,name),q7(prize,name),q8(prize,name),q9(prize,name),q10(prize,name),q11(prize,name),q12(prize,name),q13(prize,name),q14(prize,name),q15(prize,name)
@@ -33,7 +31,7 @@ def q1(prize,name): #Question 1.
         if pick != "a":
             print("\nI'm sorry {}, that's the wrong answer.".format(name))
             stop = False
-            lose(prize)
+            lose(prize,name)
 
 def q2(prize,name): #Question 2.
     stop = True
@@ -282,11 +280,11 @@ def win(prize,name):
     print("\nCongratulations {}! You've won $1,000,000 today on Who Wants to Be A Millionaire! Incredible!".format(name))
     again(prize)
 
-def lose(prize):
+def lose(prize,name):
     print("\nYou've lost. Thank you for playing here today.")
-    again(prize)
+    again(prize,name)
 
-def again(prize):
+def again(prize,name):
     stop = True
     while stop:
         choice = input("\nWould you like to play again? (Y/N)\nAnswer: ").lower()
