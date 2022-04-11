@@ -7,13 +7,10 @@ class Novel1(Author): #child class, with inheritance.
     #define attributes of class
     title: 'A Game of Thrones'
     publisher: 'Bantam Spectra'
-    pages: 694
-    genre: 'Fantasy'
+
 
 class Novel2(Author): #child class, with inheritance.
     #define attributes of class
-    title: 'Fire & Blood'
-    publisher: 'Bantam Books'
     pages: 736
     genre: 'Fantasy'
 
