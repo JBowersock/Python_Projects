@@ -1,45 +1,39 @@
-class Norse: #parent class
-    name = 'Unknown'
-    nickname = 'Unknown'
-    animal = 'Unknown'
-    weapon = 'Unknown'
+class Odin: #parent class
+    name = "Unknown"
+    mythology = 'Norse'
+    classification = 'God'
     
-    def information(self):
-        msg = "\nName: {}\nNickname: {}\nAnimal: {}\nWeapon: {}".format(self.name,self.nickname,self.animal,self.weapon)
+    def information(self): #parent class function.
+        msg = "Mythology: {}\nClassification: {}\n".format(self.mythology,self.classification)
         return msg
 
-class Thor(Norse): #child class one
-    name = 'Thor'
-    nickname = 'God of Thunder'
-    animal = 'Goat'
-    weapon = 'Hammer'
-    hair_color = 'blonde' #individual attribute 1
+class Thor(Odin): #child class
+    name = 'Thor' 
+    hair_color = 'Blonde' #individual attribute 1
     favorite_game = 'Fortnite' #individual attribute 2
 
-    def favorite(self):
-        msg = "The mighty Thor has {} hair and enjoys {} in his spare time.".format(self.hair_color,self.favorite_game)
+    def samename(self): #child class function.
+        msg = "Name:  {}\nHair Color: {}\nFavorite Game: {}".format(self.name,self.hair_color,self.favorite_game)
         return msg
 
-class Loki(Norse): #child class two
+class Loki(Odin): #child class
     name = 'Loki'
-    nickname = 'God of Mischief'
-    animal = 'Wolf'
-    weapon = 'Staff'
-    personality = 'mischievous' #individual attribute 1
-    dislikes = 'lightning' #individual attribute 2
+    personality = 'Mischievous' #individual attribute 1
+    dislikes = 'Lightning' #individual attribute 2
 
-    def dislike(self):
-        msg = "Loki is a bit on the {} side, and strongly dislikes {}.".format(self.personality,self.dislikes)
+    def samename(self): #child class function.
+        msg = "Name: {}\nPersonality: {}\nDislikes: {}".format(self.name,self.personality,self.dislikes)
         return msg
 
 if __name__ == "__main__":
     thor = Thor()
+    print(thor.samename())
     print(thor.information())
-    print(thor.favorite())
 
     loki = Loki()
+    print(loki.samename())
     print(loki.information())
-    print(loki.dislike())   
+
 
 ##POLYMORPHISM SUBMISSION ASSIGNMENT
 ##
