@@ -12,7 +12,7 @@ class Thor(Odin): #child class
     hair_color = 'Blonde' #individual attribute 1
     favorite_game = 'Fortnite' #individual attribute 2
 
-    def samename(self): #child class function.
+    def information(self): #child class function.
         msg = "Name:  {}\nHair Color: {}\nFavorite Game: {}".format(self.name,self.hair_color,self.favorite_game)
         return msg
 
@@ -21,17 +21,15 @@ class Loki(Odin): #child class
     personality = 'Mischievous' #individual attribute 1
     dislikes = 'Lightning' #individual attribute 2
 
-    def samename(self): #child class function.
+    def information(self): #child class function.
         msg = "Name: {}\nPersonality: {}\nDislikes: {}".format(self.name,self.personality,self.dislikes)
         return msg
 
 if __name__ == "__main__":
     thor = Thor()
-    print(thor.samename())
     print(thor.information())
 
     loki = Loki()
-    print(loki.samename())
     print(loki.information())
 
 
