@@ -1,15 +1,17 @@
 #Step 310;
 function1 = open('WebPageGeneratorAssignment.html', 'a') #this creates a new file (using 'a'), in the same folder.
 
+#import modules;
 import webbrowser #importing module.
+                        
 url = 'WebPageGeneratorAssignment.html' #assigning value to a variable.
 webbrowser.open(url,new=2) #opens new tab in browser with the file.
 
 function1.write("Stay tuned for our amazing summer sale!") #write method.
 function1.close() #close method.
 
-
 #Step 311;
+#import modules;
 import tkinter
 from tkinter import *
 
@@ -38,7 +40,12 @@ class window(Frame): #frame has to be capitalized.
         self.btnClose.grid(row=1, column=1, padx=(0,0), pady=(12,0), sticky=E) #sticky tells the buttom where to stay.
 
     def submit(self):
-        self.url.insert(0,)
+        userText = self.input.get() #GETs the text from the entry widget and saves it to a variable named 'userText'
+        htmlCode = "<!DOCTYPE HTML><head></head><body>" + userText + "</body></html>" #creates a variable holding the HTML code.
+        f = open ('WebPageGeneratorAssignment.html', 'w') #opens the HTML file in write mode.
+        f.write(htmlCode) #writes the HTML code to the file.
+        f.close()
+        webbrowser.open_new_tab('WebPageGeneratorAssignment.html') #opens the HTML file in the browser.
 
     def close(self):
         self.master.destroy() #destroy closes the window.
@@ -47,15 +54,6 @@ if __name__ == "__main__":
     root = Tk()
     App = window(root)
     root.mainloop() #if we dont do this, it wont continuously run.
-
-
-#-----------------------------------------------------------------------------------------------------------------------
-####notes to self:
-####1.submit button needs to be linked to the html page in order to enter user text. (Line 41)
-####2.in the text box, the text needs to be able to jump down to the next line without running past the box.
-####3.need to stop code from entering duplicate string everytime the file is ran. (Line 8)
-
-
 
 ##----------------------------------------------------------------------------------------------------------------------
 ##WEB PAGE GENERATOR PART ONE ASSIGNMENT (Python Step 310)
