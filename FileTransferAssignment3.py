@@ -52,7 +52,7 @@ class window(Frame): #frame has to be capitalized.
         self.btnOpenTwo.grid(row=1, column=0, padx=(15,16), pady=(8,0)) #sticky tells the buttom where to stay.
 
         #transfer files button.
-        self.btnCheck = Button(self.master, text="Transfer Files", width=12, height=2, command=self.open2) #command is action.
+        self.btnCheck = Button(self.master, text="Transfer Files", width=12, height=2, command=self.transfer) #command is action.
         self.btnCheck.grid(row=2, column=0, padx=(0,0), pady=(8,0)) #sticky tells the buttom where to stay.
 
         #close program button.
@@ -63,13 +63,15 @@ class window(Frame): #frame has to be capitalized.
         folderName = fd.askdirectory() #'askdirectory' is for folders. for files, use 'askopenfilename'.
         self.inputOne.insert(0,folderName) #INSERTs source path into the inputOne bar (using insert() method).
 
-####    def transfer(self):
-####    #!This needs to be implemented in order to transfer the files the user picks from Source to Destination.
-####    #open2 in Line 55 will need changed to 'transfer'.
-
     def open2(self):
         folderName = fd.askdirectory() #'askdirectory' is for folders. for files, use 'askopenfilename'.
         self.inputTwo.insert(0,folderName) #INSERTs source path into the inputTwo bar (using insert() method).
+
+    def transfer(self):
+        self.inputOne = f #assign value to a variable.
+        f.get() #get data from 'f'.
+        f.write(self.inputTwo) #write data from 'f' to inputTwo.
+        f.close() #close function.
         
     def close(self):
         self.master.destroy() #destroy closes the window.
