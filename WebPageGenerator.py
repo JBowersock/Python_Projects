@@ -1,15 +1,12 @@
+#This project, when ran will open a widget window that you can type text into.
+#And then, when submitted, will post it into the body of a new window tab.
+
 #Step 310;
 function1 = open('WebPageGeneratorAssignment.html', 'a') #this creates a new file (using 'a'), in the same folder.
 
 #import modules;
 import webbrowser #importing module.
                         
-url = 'WebPageGeneratorAssignment.html' #assigning value to a variable.
-webbrowser.open(url,new=2) #opens new tab in browser with the file.
-
-function1.write("Stay tuned for our amazing summer sale!") #write method.
-function1.close() #close method.
-
 #Step 311;
 #import modules;
 import tkinter
