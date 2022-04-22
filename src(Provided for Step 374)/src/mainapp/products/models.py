@@ -18,7 +18,7 @@ class Product(models.Model):
     objects = models.Manager()
 
     def __str__(self):
-        return self.name
+        return self.title
 
 
 
